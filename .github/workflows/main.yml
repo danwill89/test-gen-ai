@@ -12,16 +12,7 @@ jobs:
         uses: danwill89/hello-world-javascript-action@1.1
         with:
           who-to-greet: 'Dan'
+          GITHUB_TOKEN: ${{ secrets.TEST_ACTION_TOKEN }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
-      - name: Comment on PR
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Hello World!'
-            })
