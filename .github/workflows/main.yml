@@ -6,13 +6,14 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     name: A job to say hello
+    env:
+      GITHUB_TOKEN: ${{ secrets.TEST_ACTION_TOKEN }}
     steps:
       - name: Hello world action step
         id: hello
         uses: danwill89/hello-world-javascript-action@1.1
         with:
           who-to-greet: 'Dan'
-          GITHUB_TOKEN: ${{ secrets.TEST_ACTION_TOKEN }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
