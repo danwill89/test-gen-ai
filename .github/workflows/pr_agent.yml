@@ -16,8 +16,8 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.TEST_ACTION_TOKEN }}
-          API_TYPE: 'azure'
-          API_VERSION: '2023-07-01-preview'
-          API_BASE: '${{ secrets.AZURE_BASE_URL }}'
+          OPENAI_API_TYPE: 'azure'
+          OPENAI_API_VERSION: '2023-07-01-preview'
+          OPENAI_API_BASE: '${{ secrets.AZURE_BASE_URL }}'
           OPENAI.DEPLOYMENT_ID: 'turbo301'
-          CONFIG.MODEL: 'gpt-35-turbo'
+          OPENAI.CONFIG_MODEL: 'gpt-35-turbo'
