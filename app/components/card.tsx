@@ -1,5 +1,5 @@
 import styles from '../styles/card.module.scss';
-const Card = ({ name, age }: any) => {
+const Card = ({ name, age }: { name: string, age: number }) => {
     return (
         <section className={styles.card}>
             <p>{name}</p>
