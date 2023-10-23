@@ -18,6 +18,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TEST_ACTION_TOKEN }}
           API_TYPE: 'azure'
           API_VERSION: '2023-07-01-preview'
-          API_BASE: '${{ secrets.AZURE_URL }}'
+          API_BASE: '${{ secrets.AZURE_BASE_URL }}'
           OPENAI.DEPLOYMENT_ID: 'turbo301'
           CONFIG.MODEL: 'gpt-35-turbo'
