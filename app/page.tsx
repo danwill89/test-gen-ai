@@ -5,6 +5,7 @@ export default function Home() {
     <>
       <Card name="John Doe" />
       <Card name="Jane Doe" />
+      <Card name="Bob Doe" />
     </>
   )
 }
