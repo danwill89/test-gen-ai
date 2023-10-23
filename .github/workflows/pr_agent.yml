@@ -19,3 +19,4 @@ jobs:
           OPENAI_API_TYPE: 'azure'
           OPENAI_API_VERSION: '2023-07-01-preview'
           OPENAI_API_BASE: '${{ secrets.AZURE_URL }}'
+          OPENAI.DEPLOYMENT_ID: 'gpt-35-turbo'
