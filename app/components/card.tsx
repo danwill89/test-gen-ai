@@ -1,5 +1,12 @@
 import styles from '../styles/card.module.scss';
-const Card = ({ name, age, job }: { name: string, age: number, job: string }) => {
+
+interface CardProps {
+    name: string;
+    age: number;
+    job: string;
+}
+
+const Card = ({ name, age, job }: CardProps) => {
     return (
         <section className={styles.card}>
             <p>{name}</p>
