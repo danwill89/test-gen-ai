@@ -1,9 +1,14 @@
 import styles from '../styles/card.module.scss';
 
+export enum Job {
+    SOFTWARE_ENGINEER = 'Software Engineer',
+    DATA_SCIENTIST = 'Data Scientist',
+    PRODUCT_MANAGER = 'Product Manager',
+}
 interface CardProps {
     name: string;
     age: number;
-    job: string;
+    job: Job;
 }
 
 const Card = ({ name, age, job }: CardProps) => {
