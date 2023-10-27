@@ -13,6 +13,8 @@ interface CardProps {
     title: string;
 }
 
+const API_KEY = "ab4b4brjhbfsufd7ba87as7by7bsdf";
+
 const Card = ({ name, age, job, title }: CardProps) => {
     return (
         <section className={styles.card}>
