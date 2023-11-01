@@ -3,12 +3,36 @@
 
 # This setting contains a list of rules that Sweep will check for. If any of these rules are broken in a new commit, Sweep will create an pull request to fix the broken rule.
 rules:
-  - "All docstrings and comments should be up to date."
-  - "Ensure that all imports are organized and placed at the top of the file."
-  - "Use consistent naming conventions for variables, functions, and components."
-  - "Avoid using hard-coded values and instead use constants or variables."
-  - "Remove unused imports and variables to keep the code clean and efficient."
-  - "Follow a consistent indentation style throughout the codebase."
+  - rule: "All docstrings and comments should be up to date."
+    files: ["*.py", "*.js"]
+    tests: ["test_docstrings", "test_comments"]
+    severity: "high"
+    message: "Docstrings and comments are not up to date."
+  - rule: "Ensure that all imports are organized and placed at the top of the file."
+    files: ["*.py", "*.js"]
+    tests: ["test_imports"]
+    severity: "medium"
+    message: "Imports are not organized or placed at the top of the file."
+  - rule: "Use consistent naming conventions for variables, functions, and components."
+    files: ["*.py", "*.js"]
+    tests: ["test_naming_conventions"]
+    severity: "medium"
+    message: "Inconsistent naming conventions found."
+  - rule: "Avoid using hard-coded values and instead use constants or variables."
+    files: ["*.py", "*.js"]
+    tests: ["test_hard_coded_values"]
+    severity: "low"
+    message: "Hard-coded values found. Consider using constants or variables instead."
+  - rule: "Remove unused imports and variables to keep the code clean and efficient."
+    files: ["*.py", "*.js"]
+    tests: ["test_unused_imports", "test_unused_variables"]
+    severity: "medium"
+    message: "Unused imports or variables found."
+  - rule: "Follow a consistent indentation style throughout the codebase."
+    files: ["*.py", "*.js"]
+    tests: ["test_indentation"]
+    severity: "low"
+    message: "Inconsistent indentation style found."
 
 # This is the branch that Sweep will develop from and make pull requests to. Most people use 'main' or 'master' but some users also use 'dev' or 'staging'.
 branch: 'main'
