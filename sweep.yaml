@@ -4,7 +4,7 @@
 # This setting contains a list of rules that Sweep will check for. If any of these rules are broken in a new commit, Sweep will create an pull request to fix the broken rule.
 rules:
   - rule: All docstrings and comments should be up to date.
-    files: [*.py, *.js]
+    files: ["src/main.py", "src/utils.py", "src/lib.js", "src/app.js"]
     tests: [test_docstrings, test_comments]
     severity: high
     message: Docstrings and comments are not up to date.
