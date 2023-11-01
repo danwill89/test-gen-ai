@@ -23,16 +23,16 @@ rules:
     tests: [test_hard_coded_values]
     severity: low
     message: Hard-coded values found. Consider using constants or variables instead.
-  - rule: Remove unused imports and variables to keep the code clean and efficient.
+  - rule: "Remove unused imports and variables to keep the code clean and efficient."
     files: ["*.py", "*.js"]
-    tests: [test_unused_imports, test_unused_variables]
-    severity: medium
-    message: Unused imports or variables found.
-  - rule: Follow a consistent indentation style throughout the codebase.
+    tests: ["test_unused_imports", "test_unused_variables"]
+    severity: "medium"
+    message: "Unused imports or variables found."
+  - rule: "Follow a consistent indentation style throughout the codebase."
     files: ["*.py", "*.js"]
-    tests: [test_indentation]
-    severity: low
-    message: Inconsistent indentation style found.
+    tests: ["test_indentation"]
+    severity: "low"
+    message: "Inconsistent indentation style found."
 
 # This is the branch that Sweep will develop from and make pull requests to. Most people use 'main' or 'master' but some users also use 'dev' or 'staging'.
 branch: 'main'
