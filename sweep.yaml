@@ -38,7 +38,7 @@ rules:
 branch: 'main'
 
 # By default Sweep will read the logs and outputs from your existing Github Actions. To disable this, set this to false.
-gha_enabled: True
+isGHAEnabled: True
 
 # This is the description of your project. It will be used by sweep when creating PRs. You can tell Sweep what's unique about your project, what frameworks you use, or anything else you want.
 #
@@ -53,13 +53,7 @@ draft: False
 # This is a list of directories that Sweep will not be able to edit.
 blocked_dirs: []
 
-# This is a list of documentation links that Sweep will use to help it understand your code. You can add links to documentation for any packages you use here.
-#
-# Example:
-#
-# docs:
-#   - PyGitHub: ["https://pygithub.readthedocs.io/en/latest/", "We use pygithub to interact with the GitHub API"]
-docs: []
+# Removed docs field as it is currently not being used.
 
 # Sandbox executes commands in a sandboxed environment to validate code changes after every edit to guarantee pristine code. For more details, see the [Sandbox](./sandbox) page.
 sandbox:
