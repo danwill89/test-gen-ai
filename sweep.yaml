@@ -65,10 +65,9 @@ description: ''
     message: Unused imports or variables found.
   - rule: Follow a consistent indentation style throughout the codebase.
     files: ["*.py", "*.js"]
-    tests: [test_unused_imports, test_unused_variables]
-    severity: medium
-    message: Unused imports or variables found.
-  - rule: Follow a consistent indentation style throughout the codebase.
+    tests: [test_indentation]
+    severity: low
+    message: Inconsistent indentation style found.
     files: [*.py, *.js]
 sandbox:
   install:
