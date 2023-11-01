@@ -10,12 +10,12 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.TEST_ACTION_TOKEN }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       AZURE_URL: ${{ secrets.AZURE_URL }}
-    steps:
-      - name: Hello world action step
-        id: hello
-        uses: danwill89/hello-world-javascript-action@1.26
-        with:
-          who-to-greet: 'Dan'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+    # steps:
+    #   - name: Hello world action step
+    #     id: hello
+    #     uses: danwill89/hello-world-javascript-action@1.26
+    #     with:
+    #       who-to-greet: 'Dan'
+    #   # Use the output from the `hello` step
+    #   - name: Get the output time
+    #     run: echo "The time was ${{ steps.hello.outputs.time }}"
